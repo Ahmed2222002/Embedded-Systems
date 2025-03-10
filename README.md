@@ -53,5 +53,4 @@ This project implements a digital clock using an **AVR microcontroller**, a **4x
 ## Author
 Ahmed Hussien
 
-## License
-This project is licensed under the MIT License.
+
