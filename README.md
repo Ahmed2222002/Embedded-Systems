@@ -4,7 +4,7 @@
 This project implements a digital clock using an **AVR microcontroller**, a **4x4 keypad**, an **LCD display**, and a **seven-segment display**. The user can set the time using the keypad, and the clock keeps track of time using **Timer2**. The project is written in C for **AVR microcontrollers**.
 
 
-([screen shot ](https://github.com/Ahmed2222002/Embedded-Systems/blob/Real_time_clock_project/image.png))
+![screen shot](https://github.com/Ahmed2222002/Embedded-Systems/blob/Real_time_clock_project/image.png?raw=true)
 
 ## Features
 - **Real-time clock functionality** using Timer2.
