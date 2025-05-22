@@ -2,6 +2,8 @@
 
 This project implements an **Input Capture Unit (ICU)** using the **ATmega32** microcontroller to measure the frequency and duty cycle of an input signal. The results are displayed on a **16x2 LCD** in 4-bit mode. The project includes a hardware abstraction layer for LCD interfacing and a digital I/O module for flexible pin configuration. The simulation is designed and tested using **Proteus**, as shown in the provided design image.
 
+Open the Proteus design file (refer to `image.png` for schematic)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
