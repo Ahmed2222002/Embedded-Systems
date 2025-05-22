@@ -77,11 +77,55 @@ The code is modular, with separate modules for:
 ```bash
 git clone https://github.com/Ahmed2222002/Embedded-Systems.git 
 cd Embedded-Systems/Input_Capture_Uint/
+```
 
-Configure Hardware
-Connect the LCD to the ATmega32 as specified in LCD_Hardware_Interface.h:
-Data pins (D4-D7 ) to PORTA pins 4-7 (high pins, since IS_CONNECTED_TO_HIGH_PINS is set to 1)
-Register Select (RS ) to PORTB pin 1
-Enable (E ) to PORTB pin 0
-Connect the input signal to the ICP1 pin (PD6) of the ATmega32 for input capture
-Ensure an 8 MHz crystal oscillator is connected
+## Hardware Setup
+Connect the components as follows:
+- **LCD Data Pins (D4-D7)** → PORTA pins 4-7 (high pins, `IS_CONNECTED_TO_HIGH_PINS` set to 1)
+- **LCD Register Select (RS)** → PORTB pin 1
+- **LCD Enable (E)** → PORTB pin 0
+- **Input Signal** → ICP1 pin (PD6) for input capture
+- **Clock** → 8 MHz crystal oscillator
+
+## Proteus Simulation (Optional)
+1. Open the Proteus design file (refer to `image.png` for schematic)
+2. Load `main.hex` into the ATmega32
+3. Run simulation to verify LCD output and signal measurements
+
+## How It Works
+
+### Initialization
+- LCD initialized in 4-bit mode using `LCD_Hardware_Interface.h` settings
+- Timer1 configured for input capture:
+  - No prescaler
+  - Noise canceler enabled
+
+### Signal Measurement
+The ICU captures three timestamps:
+1. **a**: First rising edge
+2. **b**: Falling edge
+3. **c**: Second rising edge
+
+Calculations:
+- **High time** = b - a
+- **Period** = c - a
+- **Frequency** = F_CPU / period (Hz)
+- **Duty cycle** = (high / period) * 100 (%)
+
+### Display Output
+LCD shows:
+- **First row**: Duty cycle (e.g., `duty:75%`)
+- **Second row**: Frequency (e.g., `freq:1000HZ`)
+- If invalid signal (a ≥ b or b ≥ c): displays `out of range`
+
+## Proteus Simulation
+![Schematic](image.png)  
+The schematic shows ATmega32 connected to LCD and input signal source.
+
+## Usage Instructions
+1. Power on the circuit with ATmega32 and LCD connected
+2. Apply PWM/square wave to ICP1 pin (PD6)
+3. LCD will display:
+   - Duty cycle (e.g., `duty:75%`)
+   - Frequency (e.g., `freq:1000HZ`)
+   - Invalid signals show `out of range`
