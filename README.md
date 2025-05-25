@@ -84,3 +84,25 @@ The project is written in C and consists of the following files:
 
 ## Notes
 - The keypad layout is software-defined in `keypad.c` as:
+{'7','8','9','/'}
+{'4','5','6','*'}
+{'1','2','3','-'}
+{'c','0','=','+'}
+
+- The system uses a polling-based approach for keypad input, which may require debouncing for reliable operation.
+- Ensure proper timing for EEPROM writes (wait for EEWE bit to clear) and LCD commands (delays in `LCD.c`).
+- The project assumes a 16x2 LCD; adjust commands in `LCD.c` for different LCD sizes.
+
+## Limitations
+- No debouncing mechanism for keypad inputs, which may cause misreads in noisy environments.
+- Limited to 4-digit passwords; longer passwords require modifying `main.c` and EEPROM storage.
+- The lockout duration is fixed at 20 seconds; adjust the `puse()` function for different durations.
+
+## Future Improvements
+- Add keypad debouncing to improve input reliability.
+- Implement a more secure password storage mechanism (e.g., hashing, if feasible on ATmega32).
+- Support variable-length passwords.
+- Add a buzzer for audio feedback on key presses or errors.
+
+## License
+This project is open-source and available under the MIT License.
