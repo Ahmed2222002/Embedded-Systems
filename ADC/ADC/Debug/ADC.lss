@@ -1,0 +1,648 @@
+
+ADC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000003e6  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  0000043a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  0000043a  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000046c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000c8  00000000  00000000  000004a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000009f8  00000000  00000000  00000570  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000006b9  00000000  00000000  00000f68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000708  00000000  00000000  00001621  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000013c  00000000  00000000  00001d2c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003df  00000000  00000000  00001e68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000966  00000000  00000000  00002247  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000098  00000000  00000000  00002bad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 c9 00 	jmp	0x192	; 0x192 <__ctors_end>
+   4:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+   8:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+   c:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  10:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  14:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  18:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  1c:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  20:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  24:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  28:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  2c:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  30:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  34:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  38:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  3c:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  40:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  44:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  48:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  4c:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  50:	0c 94 d3 00 	jmp	0x1a6	; 0x1a6 <__bad_interrupt>
+  54:	f7 00       	.word	0x00f7	; ????
+  56:	0f 01       	movw	r0, r30
+  58:	0f 01       	movw	r0, r30
+  5a:	0f 01       	movw	r0, r30
+  5c:	0f 01       	movw	r0, r30
+  5e:	0f 01       	movw	r0, r30
+  60:	0f 01       	movw	r0, r30
+  62:	0f 01       	movw	r0, r30
+  64:	0f 01       	movw	r0, r30
+  66:	0f 01       	movw	r0, r30
+  68:	0f 01       	movw	r0, r30
+  6a:	0f 01       	movw	r0, r30
+  6c:	0f 01       	movw	r0, r30
+  6e:	0f 01       	movw	r0, r30
+  70:	0f 01       	movw	r0, r30
+  72:	0f 01       	movw	r0, r30
+  74:	0f 01       	movw	r0, r30
+  76:	0f 01       	movw	r0, r30
+  78:	0f 01       	movw	r0, r30
+  7a:	0f 01       	movw	r0, r30
+  7c:	0f 01       	movw	r0, r30
+  7e:	0f 01       	movw	r0, r30
+  80:	0f 01       	movw	r0, r30
+  82:	0f 01       	movw	r0, r30
+  84:	0f 01       	movw	r0, r30
+  86:	0f 01       	movw	r0, r30
+  88:	0f 01       	movw	r0, r30
+  8a:	0f 01       	movw	r0, r30
+  8c:	0f 01       	movw	r0, r30
+  8e:	0f 01       	movw	r0, r30
+  90:	0f 01       	movw	r0, r30
+  92:	0f 01       	movw	r0, r30
+  94:	0f 01       	movw	r0, r30
+  96:	0f 01       	movw	r0, r30
+  98:	0f 01       	movw	r0, r30
+  9a:	0f 01       	movw	r0, r30
+  9c:	0f 01       	movw	r0, r30
+  9e:	0f 01       	movw	r0, r30
+  a0:	0f 01       	movw	r0, r30
+  a2:	0f 01       	movw	r0, r30
+  a4:	0f 01       	movw	r0, r30
+  a6:	0f 01       	movw	r0, r30
+  a8:	0f 01       	movw	r0, r30
+  aa:	0f 01       	movw	r0, r30
+  ac:	e4 00       	.word	0x00e4	; ????
+  ae:	e8 00       	.word	0x00e8	; ????
+  b0:	ec 00       	.word	0x00ec	; ????
+  b2:	f3 00       	.word	0x00f3	; ????
+  b4:	0f 01       	movw	r0, r30
+  b6:	fe 00       	.word	0x00fe	; ????
+  b8:	05 01       	movw	r0, r10
+  ba:	47 01       	movw	r8, r14
+  bc:	60 01       	movw	r12, r0
+  be:	79 01       	movw	r14, r18
+  c0:	92 01       	movw	r18, r4
+  c2:	aa 01       	movw	r20, r20
+  c4:	aa 01       	movw	r20, r20
+  c6:	aa 01       	movw	r20, r20
+  c8:	aa 01       	movw	r20, r20
+  ca:	aa 01       	movw	r20, r20
+  cc:	aa 01       	movw	r20, r20
+  ce:	aa 01       	movw	r20, r20
+  d0:	aa 01       	movw	r20, r20
+  d2:	aa 01       	movw	r20, r20
+  d4:	aa 01       	movw	r20, r20
+  d6:	aa 01       	movw	r20, r20
+  d8:	aa 01       	movw	r20, r20
+  da:	aa 01       	movw	r20, r20
+  dc:	aa 01       	movw	r20, r20
+  de:	aa 01       	movw	r20, r20
+  e0:	aa 01       	movw	r20, r20
+  e2:	aa 01       	movw	r20, r20
+  e4:	aa 01       	movw	r20, r20
+  e6:	aa 01       	movw	r20, r20
+  e8:	aa 01       	movw	r20, r20
+  ea:	aa 01       	movw	r20, r20
+  ec:	aa 01       	movw	r20, r20
+  ee:	aa 01       	movw	r20, r20
+  f0:	aa 01       	movw	r20, r20
+  f2:	aa 01       	movw	r20, r20
+  f4:	aa 01       	movw	r20, r20
+  f6:	aa 01       	movw	r20, r20
+  f8:	aa 01       	movw	r20, r20
+  fa:	47 01       	movw	r8, r14
+  fc:	60 01       	movw	r12, r0
+  fe:	79 01       	movw	r14, r18
+ 100:	92 01       	movw	r18, r4
+ 102:	bb 01       	movw	r22, r22
+ 104:	bd 01       	movw	r22, r26
+ 106:	bf 01       	movw	r22, r30
+ 108:	c1 01       	movw	r24, r2
+ 10a:	c2 01       	movw	r24, r4
+ 10c:	c2 01       	movw	r24, r4
+ 10e:	c2 01       	movw	r24, r4
+ 110:	c2 01       	movw	r24, r4
+ 112:	c2 01       	movw	r24, r4
+ 114:	c2 01       	movw	r24, r4
+ 116:	c2 01       	movw	r24, r4
+ 118:	c2 01       	movw	r24, r4
+ 11a:	c2 01       	movw	r24, r4
+ 11c:	c2 01       	movw	r24, r4
+ 11e:	c2 01       	movw	r24, r4
+ 120:	c2 01       	movw	r24, r4
+ 122:	c2 01       	movw	r24, r4
+ 124:	c2 01       	movw	r24, r4
+ 126:	c2 01       	movw	r24, r4
+ 128:	c2 01       	movw	r24, r4
+ 12a:	c2 01       	movw	r24, r4
+ 12c:	c2 01       	movw	r24, r4
+ 12e:	c2 01       	movw	r24, r4
+ 130:	c2 01       	movw	r24, r4
+ 132:	c2 01       	movw	r24, r4
+ 134:	c2 01       	movw	r24, r4
+ 136:	c2 01       	movw	r24, r4
+ 138:	c2 01       	movw	r24, r4
+ 13a:	c2 01       	movw	r24, r4
+ 13c:	c2 01       	movw	r24, r4
+ 13e:	c2 01       	movw	r24, r4
+ 140:	c2 01       	movw	r24, r4
+ 142:	bb 01       	movw	r22, r22
+ 144:	bd 01       	movw	r22, r26
+ 146:	bf 01       	movw	r22, r30
+ 148:	c1 01       	movw	r24, r2
+ 14a:	ce 01       	movw	r24, r28
+ 14c:	d0 01       	movw	r26, r0
+ 14e:	d2 01       	movw	r26, r4
+ 150:	d4 01       	movw	r26, r8
+ 152:	d5 01       	movw	r26, r10
+ 154:	d5 01       	movw	r26, r10
+ 156:	d5 01       	movw	r26, r10
+ 158:	d5 01       	movw	r26, r10
+ 15a:	d5 01       	movw	r26, r10
+ 15c:	d5 01       	movw	r26, r10
+ 15e:	d5 01       	movw	r26, r10
+ 160:	d5 01       	movw	r26, r10
+ 162:	d5 01       	movw	r26, r10
+ 164:	d5 01       	movw	r26, r10
+ 166:	d5 01       	movw	r26, r10
+ 168:	d5 01       	movw	r26, r10
+ 16a:	d5 01       	movw	r26, r10
+ 16c:	d5 01       	movw	r26, r10
+ 16e:	d5 01       	movw	r26, r10
+ 170:	d5 01       	movw	r26, r10
+ 172:	d5 01       	movw	r26, r10
+ 174:	d5 01       	movw	r26, r10
+ 176:	d5 01       	movw	r26, r10
+ 178:	d5 01       	movw	r26, r10
+ 17a:	d5 01       	movw	r26, r10
+ 17c:	d5 01       	movw	r26, r10
+ 17e:	d5 01       	movw	r26, r10
+ 180:	d5 01       	movw	r26, r10
+ 182:	d5 01       	movw	r26, r10
+ 184:	d5 01       	movw	r26, r10
+ 186:	d5 01       	movw	r26, r10
+ 188:	d5 01       	movw	r26, r10
+ 18a:	ce 01       	movw	r24, r28
+ 18c:	d0 01       	movw	r26, r0
+ 18e:	d2 01       	movw	r26, r4
+ 190:	d4 01       	movw	r26, r8
+
+00000192 <__ctors_end>:
+ 192:	11 24       	eor	r1, r1
+ 194:	1f be       	out	0x3f, r1	; 63
+ 196:	cf e5       	ldi	r28, 0x5F	; 95
+ 198:	d8 e0       	ldi	r29, 0x08	; 8
+ 19a:	de bf       	out	0x3e, r29	; 62
+ 19c:	cd bf       	out	0x3d, r28	; 61
+ 19e:	0e 94 d6 01 	call	0x3ac	; 0x3ac <main>
+ 1a2:	0c 94 f1 01 	jmp	0x3e2	; 0x3e2 <_exit>
+
+000001a6 <__bad_interrupt>:
+ 1a6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000001aa <ADC_initialization>:
+#define ADCL *((volatile unsigned char*)(0x24))
+
+#define lift_adjust 0
+
+void ADC_initialization(char connected_pin_number ,char prscaler )
+{
+ 1aa:	e8 2f       	mov	r30, r24
+	//enable ADC
+	SET_BIT(ADCSRA,7);
+ 1ac:	86 b1       	in	r24, 0x06	; 6
+ 1ae:	80 68       	ori	r24, 0x80	; 128
+ 1b0:	86 b9       	out	0x06, r24	; 6
+	
+	// select the pin of portA that will be connected to ADC
+	// default pin is PA0
+	switch(connected_pin_number)
+ 1b2:	8e 2f       	mov	r24, r30
+ 1b4:	90 e0       	ldi	r25, 0x00	; 0
+ 1b6:	fc 01       	movw	r30, r24
+ 1b8:	35 97       	sbiw	r30, 0x05	; 5
+ 1ba:	e3 33       	cpi	r30, 0x33	; 51
+ 1bc:	f1 05       	cpc	r31, r1
+ 1be:	78 f5       	brcc	.+94     	; 0x21e <ADC_initialization+0x74>
+ 1c0:	e6 5d       	subi	r30, 0xD6	; 214
+ 1c2:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1c4:	0c 94 eb 01 	jmp	0x3d6	; 0x3d6 <__tablejump2__>
+	{
+		case '1'://ADMUX = 0000001
+			SET_BIT(ADMUX,0);
+ 1c8:	87 b1       	in	r24, 0x07	; 7
+ 1ca:	81 60       	ori	r24, 0x01	; 1
+ 1cc:	87 b9       	out	0x07, r24	; 7
+			break;
+ 1ce:	28 c0       	rjmp	.+80     	; 0x220 <ADC_initialization+0x76>
+		case '2'://ADMUX = 0000010
+			SET_BIT(ADMUX,1);
+ 1d0:	87 b1       	in	r24, 0x07	; 7
+ 1d2:	82 60       	ori	r24, 0x02	; 2
+ 1d4:	87 b9       	out	0x07, r24	; 7
+			break;
+ 1d6:	24 c0       	rjmp	.+72     	; 0x220 <ADC_initialization+0x76>
+	    case '3'://ADMUX = 0000011
+			SET_BIT(ADMUX,0);
+ 1d8:	87 b1       	in	r24, 0x07	; 7
+ 1da:	81 60       	ori	r24, 0x01	; 1
+ 1dc:	87 b9       	out	0x07, r24	; 7
+			SET_BIT(ADMUX,1);
+ 1de:	87 b1       	in	r24, 0x07	; 7
+ 1e0:	82 60       	ori	r24, 0x02	; 2
+ 1e2:	87 b9       	out	0x07, r24	; 7
+			break;
+ 1e4:	1d c0       	rjmp	.+58     	; 0x220 <ADC_initialization+0x76>
+		case '4'://ADMUX = 0000100
+			SET_BIT(ADMUX,2);
+ 1e6:	87 b1       	in	r24, 0x07	; 7
+ 1e8:	84 60       	ori	r24, 0x04	; 4
+ 1ea:	87 b9       	out	0x07, r24	; 7
+			break;
+ 1ec:	19 c0       	rjmp	.+50     	; 0x220 <ADC_initialization+0x76>
+		case 5://ADMUX = 0000101
+			SET_BIT(ADMUX,0);
+ 1ee:	87 b1       	in	r24, 0x07	; 7
+ 1f0:	81 60       	ori	r24, 0x01	; 1
+ 1f2:	87 b9       	out	0x07, r24	; 7
+			SET_BIT(ADMUX,2);
+ 1f4:	87 b1       	in	r24, 0x07	; 7
+ 1f6:	84 60       	ori	r24, 0x04	; 4
+ 1f8:	87 b9       	out	0x07, r24	; 7
+			break;
+ 1fa:	12 c0       	rjmp	.+36     	; 0x220 <ADC_initialization+0x76>
+		case '6'://ADMUX = 0000110
+			SET_BIT(ADMUX,1);
+ 1fc:	87 b1       	in	r24, 0x07	; 7
+ 1fe:	82 60       	ori	r24, 0x02	; 2
+ 200:	87 b9       	out	0x07, r24	; 7
+			SET_BIT(ADMUX,2);
+ 202:	87 b1       	in	r24, 0x07	; 7
+ 204:	84 60       	ori	r24, 0x04	; 4
+ 206:	87 b9       	out	0x07, r24	; 7
+			break;
+ 208:	0b c0       	rjmp	.+22     	; 0x220 <ADC_initialization+0x76>
+		case '7'://ADMUX = 0000111
+			SET_BIT(ADMUX,0);
+ 20a:	87 b1       	in	r24, 0x07	; 7
+ 20c:	81 60       	ori	r24, 0x01	; 1
+ 20e:	87 b9       	out	0x07, r24	; 7
+			SET_BIT(ADMUX,1);
+ 210:	87 b1       	in	r24, 0x07	; 7
+ 212:	82 60       	ori	r24, 0x02	; 2
+ 214:	87 b9       	out	0x07, r24	; 7
+			SET_BIT(ADMUX,2);
+ 216:	87 b1       	in	r24, 0x07	; 7
+ 218:	84 60       	ori	r24, 0x04	; 4
+ 21a:	87 b9       	out	0x07, r24	; 7
+			break;
+ 21c:	01 c0       	rjmp	.+2      	; 0x220 <ADC_initialization+0x76>
+		default://ADMUX = 0000000
+			ADMUX = 0;
+ 21e:	17 b8       	out	0x07, r1	; 7
+	}
+	//choose lift or right adjustment 
+	#if (lift_adjust == 1)
+		SET_BIT(ADMUX,5);
+	#else
+		CLEAR_BIT(ADMUX,5);
+ 220:	87 b1       	in	r24, 0x07	; 7
+ 222:	8f 7d       	andi	r24, 0xDF	; 223
+ 224:	87 b9       	out	0x07, r24	; 7
+	#endif
+	
+	// select V_reference = AVCC
+	SET_BIT(ADMUX,6);
+ 226:	87 b1       	in	r24, 0x07	; 7
+ 228:	80 64       	ori	r24, 0x40	; 64
+ 22a:	87 b9       	out	0x07, r24	; 7
+	CLEAR_BIT(ADMUX,7);
+ 22c:	87 b1       	in	r24, 0x07	; 7
+ 22e:	8f 77       	andi	r24, 0x7F	; 127
+ 230:	87 b9       	out	0x07, r24	; 7
+	
+	// select prescaler
+	// default prescaler  = 2  
+	
+	switch(prscaler)
+ 232:	64 33       	cpi	r22, 0x34	; 52
+ 234:	19 f0       	breq	.+6      	; 0x23c <ADC_initialization+0x92>
+ 236:	68 33       	cpi	r22, 0x38	; 56
+ 238:	29 f0       	breq	.+10     	; 0x244 <ADC_initialization+0x9a>
+ 23a:	08 95       	ret
+	{
+		case '4':
+			SET_BIT(ADCSRA,1);
+ 23c:	86 b1       	in	r24, 0x06	; 6
+ 23e:	82 60       	ori	r24, 0x02	; 2
+ 240:	86 b9       	out	0x06, r24	; 6
+			break;
+ 242:	08 95       	ret
+		case '8':
+			SET_BIT(ADCSRA,0);
+ 244:	86 b1       	in	r24, 0x06	; 6
+ 246:	81 60       	ori	r24, 0x01	; 1
+ 248:	86 b9       	out	0x06, r24	; 6
+			SET_BIT(ADCSRA,1);
+ 24a:	86 b1       	in	r24, 0x06	; 6
+ 24c:	82 60       	ori	r24, 0x02	; 2
+ 24e:	86 b9       	out	0x06, r24	; 6
+ 250:	08 95       	ret
+
+00000252 <readADC>:
+
+unsigned short readADC()
+{
+	unsigned short ADC_value;
+	// start of conversion 
+	SET_BIT(ADCSRA,6);
+ 252:	86 b1       	in	r24, 0x06	; 6
+ 254:	80 64       	ori	r24, 0x40	; 64
+ 256:	86 b9       	out	0x06, r24	; 6
+	
+	// wait till conversion is done 
+	while(READ_BIT(ADCSRA,6) == 1);
+ 258:	36 99       	sbic	0x06, 6	; 6
+ 25a:	fe cf       	rjmp	.-4      	; 0x258 <readADC+0x6>
+	
+	// read ADC_value 
+	# if (lift_adjust == 1)
+		ADC_value = ADCH ;
+	#else
+		ADC_value = ADCL;
+ 25c:	24 b1       	in	r18, 0x04	; 4
+		ADC_value = ADC_value | (ADCH << 7);
+ 25e:	85 b1       	in	r24, 0x05	; 5
+ 260:	30 e8       	ldi	r19, 0x80	; 128
+ 262:	83 9f       	mul	r24, r19
+ 264:	c0 01       	movw	r24, r0
+ 266:	11 24       	eor	r1, r1
+	#endif
+	
+	return ADC_value;
+	
+ 268:	82 2b       	or	r24, r18
+ 26a:	08 95       	ret
+
+0000026c <setBitDirection>:
+			PORTC |= (1<<bitNumber);
+		break;
+		
+		case 'D':
+		case 'd':
+			PORTD |= (1<<bitNumber);
+ 26c:	41 33       	cpi	r20, 0x31	; 49
+ 26e:	11 f4       	brne	.+4      	; 0x274 <setBitDirection+0x8>
+ 270:	21 e0       	ldi	r18, 0x01	; 1
+ 272:	01 c0       	rjmp	.+2      	; 0x276 <setBitDirection+0xa>
+ 274:	20 e0       	ldi	r18, 0x00	; 0
+ 276:	90 e0       	ldi	r25, 0x00	; 0
+ 278:	fc 01       	movw	r30, r24
+ 27a:	e1 54       	subi	r30, 0x41	; 65
+ 27c:	f1 09       	sbc	r31, r1
+ 27e:	e4 32       	cpi	r30, 0x24	; 36
+ 280:	f1 05       	cpc	r31, r1
+ 282:	08 f0       	brcs	.+2      	; 0x286 <setBitDirection+0x1a>
+ 284:	67 c0       	rjmp	.+206    	; 0x354 <setBitDirection+0xe8>
+ 286:	e3 5a       	subi	r30, 0xA3	; 163
+ 288:	ff 4f       	sbci	r31, 0xFF	; 255
+ 28a:	0c 94 eb 01 	jmp	0x3d6	; 0x3d6 <__tablejump2__>
+ 28e:	22 23       	and	r18, r18
+ 290:	59 f0       	breq	.+22     	; 0x2a8 <setBitDirection+0x3c>
+ 292:	2a b3       	in	r18, 0x1a	; 26
+ 294:	81 e0       	ldi	r24, 0x01	; 1
+ 296:	90 e0       	ldi	r25, 0x00	; 0
+ 298:	02 c0       	rjmp	.+4      	; 0x29e <setBitDirection+0x32>
+ 29a:	88 0f       	add	r24, r24
+ 29c:	99 1f       	adc	r25, r25
+ 29e:	6a 95       	dec	r22
+ 2a0:	e2 f7       	brpl	.-8      	; 0x29a <setBitDirection+0x2e>
+ 2a2:	82 2b       	or	r24, r18
+ 2a4:	8a bb       	out	0x1a, r24	; 26
+ 2a6:	08 95       	ret
+ 2a8:	2a b3       	in	r18, 0x1a	; 26
+ 2aa:	81 e0       	ldi	r24, 0x01	; 1
+ 2ac:	90 e0       	ldi	r25, 0x00	; 0
+ 2ae:	02 c0       	rjmp	.+4      	; 0x2b4 <setBitDirection+0x48>
+ 2b0:	88 0f       	add	r24, r24
+ 2b2:	99 1f       	adc	r25, r25
+ 2b4:	6a 95       	dec	r22
+ 2b6:	e2 f7       	brpl	.-8      	; 0x2b0 <setBitDirection+0x44>
+ 2b8:	80 95       	com	r24
+ 2ba:	82 23       	and	r24, r18
+ 2bc:	8a bb       	out	0x1a, r24	; 26
+ 2be:	08 95       	ret
+ 2c0:	22 23       	and	r18, r18
+ 2c2:	59 f0       	breq	.+22     	; 0x2da <setBitDirection+0x6e>
+ 2c4:	27 b3       	in	r18, 0x17	; 23
+ 2c6:	81 e0       	ldi	r24, 0x01	; 1
+ 2c8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ca:	02 c0       	rjmp	.+4      	; 0x2d0 <setBitDirection+0x64>
+ 2cc:	88 0f       	add	r24, r24
+ 2ce:	99 1f       	adc	r25, r25
+ 2d0:	6a 95       	dec	r22
+ 2d2:	e2 f7       	brpl	.-8      	; 0x2cc <setBitDirection+0x60>
+ 2d4:	82 2b       	or	r24, r18
+ 2d6:	87 bb       	out	0x17, r24	; 23
+ 2d8:	08 95       	ret
+ 2da:	27 b3       	in	r18, 0x17	; 23
+ 2dc:	81 e0       	ldi	r24, 0x01	; 1
+ 2de:	90 e0       	ldi	r25, 0x00	; 0
+ 2e0:	02 c0       	rjmp	.+4      	; 0x2e6 <setBitDirection+0x7a>
+ 2e2:	88 0f       	add	r24, r24
+ 2e4:	99 1f       	adc	r25, r25
+ 2e6:	6a 95       	dec	r22
+ 2e8:	e2 f7       	brpl	.-8      	; 0x2e2 <setBitDirection+0x76>
+ 2ea:	80 95       	com	r24
+ 2ec:	82 23       	and	r24, r18
+ 2ee:	87 bb       	out	0x17, r24	; 23
+ 2f0:	08 95       	ret
+ 2f2:	22 23       	and	r18, r18
+ 2f4:	59 f0       	breq	.+22     	; 0x30c <setBitDirection+0xa0>
+ 2f6:	24 b3       	in	r18, 0x14	; 20
+ 2f8:	81 e0       	ldi	r24, 0x01	; 1
+ 2fa:	90 e0       	ldi	r25, 0x00	; 0
+ 2fc:	02 c0       	rjmp	.+4      	; 0x302 <setBitDirection+0x96>
+ 2fe:	88 0f       	add	r24, r24
+ 300:	99 1f       	adc	r25, r25
+ 302:	6a 95       	dec	r22
+ 304:	e2 f7       	brpl	.-8      	; 0x2fe <setBitDirection+0x92>
+ 306:	82 2b       	or	r24, r18
+ 308:	84 bb       	out	0x14, r24	; 20
+ 30a:	08 95       	ret
+ 30c:	24 b3       	in	r18, 0x14	; 20
+ 30e:	81 e0       	ldi	r24, 0x01	; 1
+ 310:	90 e0       	ldi	r25, 0x00	; 0
+ 312:	02 c0       	rjmp	.+4      	; 0x318 <setBitDirection+0xac>
+ 314:	88 0f       	add	r24, r24
+ 316:	99 1f       	adc	r25, r25
+ 318:	6a 95       	dec	r22
+ 31a:	e2 f7       	brpl	.-8      	; 0x314 <setBitDirection+0xa8>
+ 31c:	80 95       	com	r24
+ 31e:	82 23       	and	r24, r18
+ 320:	84 bb       	out	0x14, r24	; 20
+ 322:	08 95       	ret
+ 324:	22 23       	and	r18, r18
+ 326:	59 f0       	breq	.+22     	; 0x33e <setBitDirection+0xd2>
+ 328:	21 b3       	in	r18, 0x11	; 17
+ 32a:	81 e0       	ldi	r24, 0x01	; 1
+ 32c:	90 e0       	ldi	r25, 0x00	; 0
+ 32e:	02 c0       	rjmp	.+4      	; 0x334 <setBitDirection+0xc8>
+ 330:	88 0f       	add	r24, r24
+ 332:	99 1f       	adc	r25, r25
+ 334:	6a 95       	dec	r22
+ 336:	e2 f7       	brpl	.-8      	; 0x330 <setBitDirection+0xc4>
+ 338:	82 2b       	or	r24, r18
+ 33a:	81 bb       	out	0x11, r24	; 17
+ 33c:	08 95       	ret
+ 33e:	21 b3       	in	r18, 0x11	; 17
+ 340:	81 e0       	ldi	r24, 0x01	; 1
+ 342:	90 e0       	ldi	r25, 0x00	; 0
+ 344:	02 c0       	rjmp	.+4      	; 0x34a <setBitDirection+0xde>
+ 346:	88 0f       	add	r24, r24
+ 348:	99 1f       	adc	r25, r25
+ 34a:	6a 95       	dec	r22
+ 34c:	e2 f7       	brpl	.-8      	; 0x346 <setBitDirection+0xda>
+ 34e:	80 95       	com	r24
+ 350:	82 23       	and	r24, r18
+ 352:	81 bb       	out	0x11, r24	; 17
+ 354:	08 95       	ret
+
+00000356 <setBortDirection>:
+ 356:	61 33       	cpi	r22, 0x31	; 49
+ 358:	11 f4       	brne	.+4      	; 0x35e <setBortDirection+0x8>
+ 35a:	2f ef       	ldi	r18, 0xFF	; 255
+ 35c:	01 c0       	rjmp	.+2      	; 0x360 <setBortDirection+0xa>
+ 35e:	20 e0       	ldi	r18, 0x00	; 0
+ 360:	90 e0       	ldi	r25, 0x00	; 0
+ 362:	fc 01       	movw	r30, r24
+ 364:	e1 54       	subi	r30, 0x41	; 65
+ 366:	f1 09       	sbc	r31, r1
+ 368:	e4 32       	cpi	r30, 0x24	; 36
+ 36a:	f1 05       	cpc	r31, r1
+ 36c:	58 f4       	brcc	.+22     	; 0x384 <setBortDirection+0x2e>
+ 36e:	ef 57       	subi	r30, 0x7F	; 127
+ 370:	ff 4f       	sbci	r31, 0xFF	; 255
+ 372:	0c 94 eb 01 	jmp	0x3d6	; 0x3d6 <__tablejump2__>
+ 376:	2a bb       	out	0x1a, r18	; 26
+ 378:	08 95       	ret
+ 37a:	27 bb       	out	0x17, r18	; 23
+ 37c:	08 95       	ret
+ 37e:	24 bb       	out	0x14, r18	; 20
+ 380:	08 95       	ret
+ 382:	21 bb       	out	0x11, r18	; 17
+ 384:	08 95       	ret
+
+00000386 <writePort>:
+	}
+}
+
+void writePort(char port , char value)
+{
+	switch(port)
+ 386:	90 e0       	ldi	r25, 0x00	; 0
+ 388:	fc 01       	movw	r30, r24
+ 38a:	e1 54       	subi	r30, 0x41	; 65
+ 38c:	f1 09       	sbc	r31, r1
+ 38e:	e4 32       	cpi	r30, 0x24	; 36
+ 390:	f1 05       	cpc	r31, r1
+ 392:	58 f4       	brcc	.+22     	; 0x3aa <writePort+0x24>
+ 394:	eb 55       	subi	r30, 0x5B	; 91
+ 396:	ff 4f       	sbci	r31, 0xFF	; 255
+ 398:	0c 94 eb 01 	jmp	0x3d6	; 0x3d6 <__tablejump2__>
+	{
+		case 'A':
+		case 'a':
+			PORTA = value;
+ 39c:	6b bb       	out	0x1b, r22	; 27
+		break;
+ 39e:	08 95       	ret
+		
+		case 'B':
+		case 'b':
+			PORTB = value;
+ 3a0:	68 bb       	out	0x18, r22	; 24
+		break;
+ 3a2:	08 95       	ret
+		
+		case 'C':
+		case 'c':
+			PORTC = value;
+ 3a4:	65 bb       	out	0x15, r22	; 21
+		break;
+ 3a6:	08 95       	ret
+		
+		case 'D':
+		case 'd':
+			PORTD = value;
+ 3a8:	62 bb       	out	0x12, r22	; 18
+ 3aa:	08 95       	ret
+
+000003ac <main>:
+
+int main(void)
+{
+	
+	
+   setBitDirection('A',0,'0');
+ 3ac:	40 e3       	ldi	r20, 0x30	; 48
+ 3ae:	60 e0       	ldi	r22, 0x00	; 0
+ 3b0:	70 e0       	ldi	r23, 0x00	; 0
+ 3b2:	81 e4       	ldi	r24, 0x41	; 65
+ 3b4:	0e 94 36 01 	call	0x26c	; 0x26c <setBitDirection>
+   ADC_initialization('0','64');
+ 3b8:	64 e3       	ldi	r22, 0x34	; 52
+ 3ba:	80 e3       	ldi	r24, 0x30	; 48
+ 3bc:	0e 94 d5 00 	call	0x1aa	; 0x1aa <ADC_initialization>
+   setBortDirection('D','1');
+ 3c0:	61 e3       	ldi	r22, 0x31	; 49
+ 3c2:	84 e4       	ldi	r24, 0x44	; 68
+ 3c4:	0e 94 ab 01 	call	0x356	; 0x356 <setBortDirection>
+    while (1) 
+    {
+		unsigned short adc_val = readADC();
+ 3c8:	0e 94 29 01 	call	0x252	; 0x252 <readADC>
+		writePort('D',adc_val);
+ 3cc:	68 2f       	mov	r22, r24
+ 3ce:	84 e4       	ldi	r24, 0x44	; 68
+ 3d0:	0e 94 c3 01 	call	0x386	; 0x386 <writePort>
+ 3d4:	f9 cf       	rjmp	.-14     	; 0x3c8 <main+0x1c>
+
+000003d6 <__tablejump2__>:
+ 3d6:	ee 0f       	add	r30, r30
+ 3d8:	ff 1f       	adc	r31, r31
+ 3da:	05 90       	lpm	r0, Z+
+ 3dc:	f4 91       	lpm	r31, Z
+ 3de:	e0 2d       	mov	r30, r0
+ 3e0:	09 94       	ijmp
+
+000003e2 <_exit>:
+ 3e2:	f8 94       	cli
+
+000003e4 <__stop_program>:
+ 3e4:	ff cf       	rjmp	.-2      	; 0x3e4 <__stop_program>
