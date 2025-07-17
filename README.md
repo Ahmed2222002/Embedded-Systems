@@ -7,7 +7,7 @@ This project demonstrates the implementation and testing of the Analog-to-Digita
 
 
 ## Image
-![ATMega32 ADC Setup]([https://dummy-url-to-be-replaced.com/adc_setup.jpg](https://github.com/Ahmed2222002/Embedded-Systems/blob/ADC_Driver/image.png))
+![ATMega32 ADC Setup](https://github.com/Ahmed2222002/Embedded-Systems/blob/ADC_Driver/image.png)
 
 ## Project Structure
 The project consists of the following files:
